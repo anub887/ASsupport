@@ -33,8 +33,37 @@ export default function VideoLibrarySection() {
   const [selectedVideo, setSelectedVideo] = useState<Video | null>(null);
 
   return (
-    <div>
-      <h2>✅ Loaded videos array successfully</h2>
+    <div style={{ padding: "1rem" }}>
+      <h2>✅ Video Thumbnails</h2>
+      <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+        {videos.map((video) => (
+          <div
+            key={video.id}
+            onClick={() => setSelectedVideo(video)}
+            style={{
+              border: "1px solid #ccc",
+              borderRadius: "8px",
+              padding: "1rem",
+              width: "300px",
+              cursor: "pointer",
+              background: "#f9f9f9"
+            }}
+          >
+            <iframe
+              width="100%"
+              height="180"
+              src={video.videoUrl}
+              title={video.title}
+              frameBorder="0"
+              allowFullScreen
+            />
+            <h3>{video.title}</h3>
+            <p>{video.description}</p>
+            <p><strong>Duration:</strong> {video.duration}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
+
