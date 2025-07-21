@@ -28,4 +28,12 @@ export default function VideoModal({ video, open, onOpenChange }: VideoModalProp
       <h2>{video.title}</h2>
       <iframe
         width="100%" height="400"
-        src={vid
+        src={video.videoUrl}
+        frameBorder="0"
+        allowFullScreen
+        title={video.title}
+      />
+      <p>{video.description}</p>
+    </div>
+  );
+}
