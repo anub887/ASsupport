@@ -1,13 +1,13 @@
 import React, { useState, useContext } from "react";
 import { useAuth } from "./contexts/AuthContext";
-import { useNavigate } from "wouter";
+import { useLocation } from "wouter";
 
 export default function Login() {
   const { login } = useContext(AuthContext);
   const [email, setEmail] = useState("");
   const [pw, setPw] = useState("");
   const [err, setErr] = useState("");
-  const navigate = useNavigate();
+  const [, navigate] = useLocation();
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
