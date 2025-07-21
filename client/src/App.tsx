@@ -2,12 +2,12 @@ import React from "react";
 import { Route } from "wouter";
 import { AuthProvider } from "./contexts/AuthContext";
 import NavBar from "./components/NavBar";
-import Home from "./pages/Home";
-import Videos from "./pages/Videos";
-import Resources from "./pages/Resources";
-import Chat from "./pages/Chat";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
+import Home from "./Home";
+import Videos from "./Videos";
+import Resources from "./Resources";
+import Chat from "./Chat";
+import Login from "./Login";
+import Signup from "./Signup";
 
 export default function App() {
   return (
