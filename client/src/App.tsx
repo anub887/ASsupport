@@ -13,6 +13,9 @@ export default function App() {
   return (
     <Router>
       <AuthProvider>
+        <div style={{ padding: "1rem", background: "#fff", color: "black" }}>
+          ✅ App Loaded — If you see this, routing works!
+        </div>
         <NavBar />
         <Route path="/" component={Home} />
         <Route path="/videos" component={Videos} />
