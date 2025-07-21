@@ -34,7 +34,7 @@ export default function VideoLibrarySection() {
 
   return (
     <div style={{ padding: "1rem" }}>
-      <h2>✅ Video Thumbnails</h2>
+      <h2>✅ Modal Test</h2>
       <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
         {videos.map((video) => (
           <div
@@ -63,7 +63,15 @@ export default function VideoLibrarySection() {
           </div>
         ))}
       </div>
+
+      {/* Only show modal if a video is selected */}
+      {selectedVideo && (
+        <VideoModal
+          video={selectedVideo}
+          open={!!selectedVideo}
+          onOpenChange={() => setSelectedVideo(null)}
+        />
+      )}
     </div>
   );
 }
-
