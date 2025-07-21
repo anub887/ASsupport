@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { AuthContext } from "../contexts/AuthContext";
+import { useAuth } from "./contexts/AuthContext";
 import { useNavigate } from "wouter";
 
 export default function Signup() {
