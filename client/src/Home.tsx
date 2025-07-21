@@ -1,12 +1,9 @@
 import React from "react";
-import VideoLibrarySection from "./components/video-library-section";
-import RecipeLibrarySection from "./components/recipe-library-section";
 
 export default function Home() {
   return (
-    <>
-      <VideoLibrarySection />
-      <RecipeLibrarySection />
-    </>
+    <div style={{ padding: "2rem", fontSize: "1.5rem", color: "black" }}>
+      ✅ Home Page Loaded Successfully!
+    </div>
   );
 }
